@@ -1,0 +1,169 @@
+
+    
+    body {
+    background-color: #3f1111;
+    color: #ff5757;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+    }
+    
+    .caixa-principal {
+    background-color: #410d0d;
+    border-radius: 12px;
+    padding: 30px;
+    max-width: 600px;
+    width: 100%;
+    box-shadow: 0 10px 25px rgba(255, 0, 0, 0.5);
+    border: 1px solid #2600ff;
+    }
+    
+    /* Título */
+    
+    .titulo-honrado {
+    font-size: 1.1rem;
+    font-style: italic;
+    text-align: center;
+    color: #4dddfd;
+    margin-bottom: 20px;
+    text-shadow: 0 0 10px rgba(7, 252, 191, 0.4);
+    }
+    
+    /* Barra de progresso */
+    
+    .barra-progresso-container {
+    width: 100%;
+    height: 10px;
+    background-color: #29a03f;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-bottom: 25px;
+    }
+    
+    .barra-progresso-preenchimento {
+    height: 100%;
+    width: 0%;
+    background: linear-gradient(90deg, #fcf80a, #ff0000);
+    transition: width 0.4s ease-in-out;
+    }
+    
+    /* Perguntas */
+    
+    .caixa-perguntas {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+    line-height: 1.5;
+    }
+    
+    /* Alternativas */
+    
+    .caixa-alternativas {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    }
+    
+    .caixa-alternativas button {
+    background-color: #3f0f0f;
+    color: #ffffff;
+    border: 1px solid #ff0000;
+    padding: 14px 18px;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    text-align: left;
+    transition: all 0.2s ease;
+    }
+    
+    .caixa-alternativas button:hover {
+    background-color: #650f0f;
+    border-color: #ff4444;
+    transform: translateY(-2px);
+    }
+    
+    /* Resultado */
+    
+    .caixa-resultado {
+    margin-top: 20px;
+    }
+    
+    .texto-resultado {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #fa4b4b;
+    margin-bottom: 20px;
+    }
+    
+    /* Animação */
+    
+    @keyframes surgir {
+    from {
+    opacity: 0;
+    transform: translateY(12px);
+    }
+    
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    
+    
+    }
+    
+    .animar-entrada {
+    animation: surgir 0.4s ease-out forwards;
+    }
+    
+    /* Botão de reiniciar */
+    
+    .caixa-resultado button,
+    .caixa-alternativas button {
+    font-family: inherit;
+    }
+    
+    .caixa-alternativas > button:last-child {
+    margin-top: 10px;
+    }
+    
+    /* Celular */
+    
+    @media (max-width: 600px) {
+    body {
+    padding: 12px;
+    }
+    
+    .caixa-principal {
+        padding: 20px;
+    }
+    
+    .caixa-perguntas {
+        font-size: 1.1rem;
+    }
+    
+    .caixa-alternativas button {
+        font-size: 0.95rem;
+    }
+    
+    
+}
+
+to {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.caixa-principal {
+    padding: 20px;
+}
+
+.caixa-perguntas {
+    font-size: 1.1rem;
+}
+
+.caixa-alternativas button {
+    font-size: 0.95rem;
+}
+
