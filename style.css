@@ -1,6 +1,15 @@
+/* Importação de fonte bonita do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
 
-    
-    body {
+/* Configuração geral e fonte para todos os elementos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
     background-color: #3f1111;
     color: #ff5757;
     display: flex;
@@ -8,9 +17,9 @@
     align-items: center;
     min-height: 100vh;
     padding: 20px;
-    }
-    
-    .caixa-principal {
+}
+
+.caixa-principal {
     background-color: #410d0d;
     border-radius: 12px;
     padding: 30px;
@@ -18,152 +27,149 @@
     width: 100%;
     box-shadow: 0 10px 25px rgba(255, 0, 0, 0.5);
     border: 1px solid #2600ff;
-    }
-    
-    /* Título */
-    
-    .titulo-honrado {
-    font-size: 1.1rem;
+    text-align: center;
+}
+
+/* Título */
+.titulo-honrado {
+    font-size: 1.4rem;
     font-style: italic;
     text-align: center;
     color: #4dddfd;
     margin-bottom: 20px;
     text-shadow: 0 0 10px rgba(7, 252, 191, 0.4);
-    }
-    
-    /* Barra de progresso */
-    
-    .barra-progresso-container {
+}
+
+/* Tela Inicial */
+.tela-inicial p {
+    color: #ffffff;
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+/* Estilização Geral dos Botões */
+button {
+    font-family: inherit;
+    background-color: #3f0f0f;
+    color: #ffffff;
+    border: 1px solid #ff0000;
+    padding: 14px 20px;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+button:hover {
+    background-color: #650f0f;
+    border-color: #ff4444;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(255, 0, 0, 0.3);
+}
+
+/* Botões específicos da Tela Inicial e de Resultado */
+.iniciar-btn, .novamente-btn {
+    background-color: #ff0000;
+    color: #ffffff;
+    border: none;
+    padding: 12px 30px;
+    font-size: 1.1rem;
+}
+
+.iniciar-btn:hover, .novamente-btn:hover {
+    background-color: #ff3333;
+    box-shadow: 0 0 15px rgba(255, 0, 0, 0.6);
+}
+
+/* Barra de progresso */
+.barra-progresso-container {
     width: 100%;
     height: 10px;
     background-color: #29a03f;
     border-radius: 5px;
     overflow: hidden;
     margin-bottom: 25px;
-    }
-    
-    .barra-progresso-preenchimento {
+}
+
+.barra-progresso-preenchimento {
     height: 100%;
     width: 0%;
     background: linear-gradient(90deg, #fcf80a, #ff0000);
     transition: width 0.4s ease-in-out;
-    }
-    
-    /* Perguntas */
-    
-    .caixa-perguntas {
+}
+
+/* Perguntas */
+.caixa-perguntas {
     font-size: 1.25rem;
     font-weight: 600;
     margin-bottom: 20px;
     line-height: 1.5;
-    }
-    
-    /* Alternativas */
-    
-    .caixa-alternativas {
+    color: #ffffff;
+}
+
+/* Alternativas */
+.caixa-alternativas {
     display: flex;
     flex-direction: column;
     gap: 12px;
-    }
-    
-    .caixa-alternativas button {
-    background-color: #3f0f0f;
-    color: #ffffff;
-    border: 1px solid #ff0000;
-    padding: 14px 18px;
-    border-radius: 8px;
-    font-size: 1rem;
-    cursor: pointer;
+}
+
+.caixa-alternativas button {
     text-align: left;
-    transition: all 0.2s ease;
-    }
-    
-    .caixa-alternativas button:hover {
-    background-color: #650f0f;
-    border-color: #ff4444;
-    transform: translateY(-2px);
-    }
-    
-    /* Resultado */
-    
-    .caixa-resultado {
+}
+
+/* Resultado */
+.caixa-resultado {
     margin-top: 20px;
-    }
-    
-    .texto-resultado {
+}
+
+.texto-resultado {
     font-size: 1.1rem;
     line-height: 1.6;
-    color: #fa4b4b;
+    color: #ffffff;
     margin-bottom: 20px;
-    }
-    
-    /* Animação */
-    
-    @keyframes surgir {
+}
+
+/* Animação */
+@keyframes surgir {
     from {
-    opacity: 0;
-    transform: translateY(12px);
+        opacity: 0;
+        transform: translateY(12px);
     }
-    
     to {
         opacity: 1;
         transform: translateY(0);
     }
-    
-    
-    }
-    
-    .animar-entrada {
+}
+
+.animar-entrada {
     animation: surgir 0.4s ease-out forwards;
-    }
-    
-    /* Botão de reiniciar */
-    
-    .caixa-resultado button,
-    .caixa-alternativas button {
-    font-family: inherit;
-    }
-    
-    .caixa-alternativas > button:last-child {
-    margin-top: 10px;
-    }
-    
-    /* Celular */
-    
-    @media (max-width: 600px) {
+}
+
+/* Responsividade para Celulares */
+@media (max-width: 600px) {
     body {
-    padding: 12px;
+        padding: 12px;
     }
-    
+
     .caixa-principal {
         padding: 20px;
     }
-    
+
     .caixa-perguntas {
         font-size: 1.1rem;
     }
-    
-    .caixa-alternativas button {
+
+    button {
         font-size: 0.95rem;
     }
-    
-    
 }
 
-to {
-    opacity: 1;
-    transform: translateY(0);
+.barra-progresso-container,
+.caixa-perguntas,
+.caixa-alternativas,
+.caixa-resultado {
+    display: none;
 }
-
-.caixa-principal {
-    padding: 20px;
-}
-
-.caixa-perguntas {
-    font-size: 1.1rem;
-}
-
-.caixa-alternativas button {
-    font-size: 0.95rem;
-}
-
